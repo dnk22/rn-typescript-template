@@ -1,0 +1,24 @@
+{
+  "name": "rn-typescript-template",
+  "title": "A beautiful template for React Native.",
+  "version": "0.0.1",
+  "description": "React Native Typescript Template",
+  "author": "Duy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dnk22/rn-typescript-template.git",
+    "baseUrl": "https://github.com:dnk22/rn-typescript-template.git"
+  },
+  "keywords": [
+    "react-native",
+    "components",
+    "template",
+    "typescript"
+  ],
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md"
+}
