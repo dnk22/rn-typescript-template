@@ -62,24 +62,13 @@ function Item({ item, onPress, isActive, colors }: ItemProps) {
       onPress={onHandlePressItem}
     >
       <View style={styles.alertItemContent}>
-        <SvgIcon
-          name={bellIcon}
-          preset="alertIcon"
-          style={styles.alertItemIcon}
-        />
+        <SvgIcon name={bellIcon} preset="alertIcon" style={styles.alertItemIcon} />
         <View>
-          <Text
-            numberOfLines={2}
-            style={[styles.alertItemText, { color: colors.text }]}
-          >
+          <Text numberOfLines={2} style={[styles.alertItemText, { color: colors.text }]}>
             {name}
           </Text>
           <Animated.View
-            style={[
-              styles.textStrike,
-              { backgroundColor: colors.text },
-              strikeAnimatedStyle,
-            ]}
+            style={[styles.textStrike, { backgroundColor: colors.text }, strikeAnimatedStyle]}
           />
         </View>
       </View>

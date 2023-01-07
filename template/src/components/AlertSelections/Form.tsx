@@ -1,17 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styles from './styles';
 import { Pressable, Text, TextInput, View } from 'react-native';
-import {
-  MenuAction,
-  MenuView as RNMenuView,
-  NativeActionEvent,
-} from '@react-native-menu/menu';
+import { MenuAction, MenuView as RNMenuView, NativeActionEvent } from '@react-native-menu/menu';
 import { useCustomTheme } from 'resources/theme';
-import {
-  differenceInDays,
-  differenceInHours,
-  differenceInMinutes,
-} from 'date-fns';
+import { differenceInDays, differenceInHours, differenceInMinutes } from 'date-fns';
 import Animated, { ZoomIn } from 'react-native-reanimated';
 import { AddAlertItemProps } from 'utils/types';
 
@@ -84,9 +76,7 @@ export default function Form({ dateValidation, onChange }: FormType) {
     setLimit(value);
   };
 
-  const onHandlePressAction = ({
-    nativeEvent: { event },
-  }: NativeActionEvent) => {
+  const onHandlePressAction = ({ nativeEvent: { event } }: NativeActionEvent) => {
     setIsSelect(event);
   };
 
@@ -117,22 +107,14 @@ export default function Form({ dateValidation, onChange }: FormType) {
         {isShowForm && (
           <Animated.View style={styles.form} entering={ZoomIn.duration(400)}>
             <TextInput
-              style={[
-                styles.formInput,
-                styles.formBorder,
-                { borderColor: colors.divider },
-              ]}
+              style={[styles.formInput, styles.formBorder, { borderColor: colors.divider }]}
               keyboardType={'numeric'}
               onChangeText={onHandleInputChange}
               autoFocus
               maxLength={limit.toString().length}
             />
             <RNMenuView
-              style={[
-                styles.formSelect,
-                styles.formBorder,
-                { borderColor: colors.divider },
-              ]}
+              style={[styles.formSelect, styles.formBorder, { borderColor: colors.divider }]}
               onPressAction={onHandlePressAction}
               actions={renderActions}
             >

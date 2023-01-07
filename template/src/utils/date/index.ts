@@ -1,9 +1,5 @@
-import {
-  format,
-  formatDistanceToNow,
-  differenceInMilliseconds,
-} from "date-fns";
-import { vi } from "date-fns/locale";
+import { format, formatDistanceToNow, differenceInMilliseconds } from 'date-fns';
+import { vi } from 'date-fns/locale';
 
 // define variable
 const ONE_MINUTE = 60;
@@ -17,8 +13,8 @@ const ONE_DAY = 60 * 60 * 24;
  */
 export const formatDateLocal = (
   date: Date | number,
-  formatType: string = "dd/MM/yyyy",
-  local: any = vi
+  formatType: string = 'dd/MM/yyyy',
+  local: any = vi,
 ) => {
   return format(new Date(date), formatType, { locale: local });
 };
@@ -34,10 +30,7 @@ type TTimeAgo = {
   style?: string;
 };
 
-export const getFormatDistanceToNow = (
-  date: Date | number,
-  options?: TTimeAgo
-): string => {
+export const getFormatDistanceToNow = (date: Date | number, options?: TTimeAgo): string => {
   return formatDistanceToNow(new Date(date), {
     addSuffix: true,
     locale: vi,
@@ -49,22 +42,15 @@ export const getFormatDistanceToNow = (
  * Return the distance between the given future date and now in words.
  */
 export const getCountDownBetweenDate = (
-  targetDateTime: Date | number | string
+  targetDateTime: Date | number | string,
 ): { [name: string]: number } | number => {
-  const diffInMilliSeconds = differenceInMilliseconds(
-    new Date(targetDateTime),
-    new Date()
-  );
+  const diffInMilliSeconds = differenceInMilliseconds(new Date(targetDateTime), new Date());
   if (diffInMilliSeconds <= 0) {
     return 0;
   }
   const days = Math.floor(diffInMilliSeconds / (1000 * ONE_DAY));
-  const hours = Math.floor(
-    (diffInMilliSeconds % (1000 * ONE_DAY)) / (1000 * ONE_HOUR)
-  );
-  const minutes = Math.floor(
-    (diffInMilliSeconds % (1000 * ONE_HOUR)) / (1000 * ONE_MINUTE)
-  );
+  const hours = Math.floor((diffInMilliSeconds % (1000 * ONE_DAY)) / (1000 * ONE_HOUR));
+  const minutes = Math.floor((diffInMilliSeconds % (1000 * ONE_HOUR)) / (1000 * ONE_MINUTE));
   const seconds = Math.floor((diffInMilliSeconds % (1000 * ONE_MINUTE)) / 1000);
 
   return { Ngày: days, Giờ: hours, Phút: minutes, Giây: seconds };

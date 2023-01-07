@@ -16,9 +16,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <PersistGate loading={<Loading />} persistor={persistor}>
-        <NavigationContainer
-          theme={MyAppTheme[isDarkMode ? 'dark' : 'default']}
-        >
+        <NavigationContainer theme={MyAppTheme[isDarkMode ? 'dark' : 'default']}>
           <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
           <AppNavigators />
         </NavigationContainer>

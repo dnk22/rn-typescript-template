@@ -1,8 +1,12 @@
 module.exports = {
   root: true,
-  extends: '@',
+  env: {
+    es6: true,
+    browser: true,
+    es2021: true,
+  },
   plugins: ['@typescript-eslint'],
-  extends: ['prettier', '@react-native-community'],
+  extends: ['airbnb-base', 'prettier', '@react-native-community'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],

@@ -16,19 +16,13 @@ export interface AlertSelectionsProps {
   onValuesChange?: (item: number[]) => void;
 }
 
-function AlertSelections({
-  values = [0],
-  dateValidation,
-  onValuesChange,
-}: AlertSelectionsProps) {
+function AlertSelections({ values = [0], dateValidation, onValuesChange }: AlertSelectionsProps) {
   const { colors } = useCustomTheme();
   const dispatch = useAppDispatch();
   const [alert, setAlert] = useState<number[]>(values);
 
   const isItemActive = (value: number) => alert.includes(value);
-  const alertSettingsData = useAppSelector((state: RootState) =>
-    alertSelectors.selectAll(state)
-  );
+  const alertSettingsData = useAppSelector((state: RootState) => alertSelectors.selectAll(state));
 
   useEffect(() => {
     onValuesChange && onValuesChange(alert);
