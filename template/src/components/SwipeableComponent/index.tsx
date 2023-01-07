@@ -2,10 +2,10 @@ import React, { memo, useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import { Animated, View } from 'react-native';
 import { RectButton, Swipeable } from 'react-native-gesture-handler';
-import { useCustomTheme } from 'resources/theme';
 import TrashIcon from 'assets/svg/icon-trash.svg';
 import styles from './styles';
 import { SwipeableProps } from 'react-native-gesture-handler/lib/typescript/components/Swipeable';
+import { useCustomTheme } from '/resources/theme';
 
 interface ISwipeableComponentProps extends SwipeableProps {
   children: React.ReactNode;

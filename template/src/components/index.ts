@@ -1,4 +1,4 @@
-import SvgIcon from 'components/SvgIcon';
+import SvgIcon from 'src/components/SvgIcon';
 import DateTimePicker from 'components/DateTimePicker';
 import InputField from 'components/InputField';
 import Text from './Text';

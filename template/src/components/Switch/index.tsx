@@ -1,8 +1,8 @@
 import React, { memo } from 'react';
 import isEqual from 'react-fast-compare';
 import { Switch as RNSwitch } from 'react-native';
-import { useCustomTheme } from 'resources/theme';
 import { ISwitchProps } from './type';
+import { useCustomTheme } from '/resources/theme';
 
 function Switch({
   style,

@@ -7,7 +7,7 @@
     "baseUrl": ".",
     "strict": true,
     "paths": {
-      "/*" : ["./src/*"],
+      "/*" : ["./*"],
       // "assets/*": ["src/assets/*"],
       // "components/*": ["src/components/*"],
       // "features/*": ["src/features/*"],
