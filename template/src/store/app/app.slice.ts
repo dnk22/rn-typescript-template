@@ -1,7 +1,7 @@
 import { alertInitialState } from 'utils/constant';
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { AlertItemProps } from 'utils/types';
+import { AlertItemProps } from 'types';
 
 export const alertAdapter = createEntityAdapter<AlertItemProps>();
 

@@ -12,16 +12,3 @@ export type TDimensionsType = {
     avatar: number;
   };
 };
-
-export interface AlertItemProps {
-  id: string;
-  name?: string;
-  value: number;
-  type: string;
-  default?: boolean;
-}
-
-export interface AddAlertItemProps {
-  value: number;
-  type: string;
-}

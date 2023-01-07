@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 export const isIos = Platform.OS === 'ios';
 import { hexStringFromCSSColor } from 'utils/string';
-import { CustomOmit } from 'utils/types';
+import { CustomOmit } from 'types';
 
 const { AppModule } = NativeModules;
 
